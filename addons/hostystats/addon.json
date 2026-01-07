@@ -1,0 +1,18 @@
+{
+  "name": "HostyStats",
+  "description": "Page",
+  "uuid": "hostystats",
+  "version": "1.0",
+  "author": {
+    "name": "Hostalis",
+    "email": "contact@hostalis.fr"
+  },
+  "autoload": {
+    "files": [
+      "src/HostyStatsServiceProvider.php"
+    ]
+  },
+  "providers": [
+    "App\\Addons\\HostyStats\\HostyStatsServiceProvider"
+  ]
+}
