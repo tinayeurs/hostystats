@@ -1,4 +1,4 @@
-@extends('layouts.client')
+@extends('layouts.front')
 
 @section('title', 'Statut des services')
 
