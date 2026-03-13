@@ -2,6 +2,94 @@
 
 @section('title', 'Statut des services')
 
+@section('styles')
+
+<style>
+  .hs-maintenance{
+    border-radius: 16px;
+    border: 1px solid rgba(0,0,0,.08);
+    background: #fff;
+    color: #0f172a;
+  }
+
+  .hs-maintenance .hs-maintenance-pill{
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    padding: .3rem .6rem;
+    border-radius: 999px;
+    font-weight: 700;
+  }
+
+  .hs-maintenance.hs-sev-yellow{
+    border-color: #fcd34d;
+    background: #fffbeb;
+    color: #78350f;
+  }
+  .hs-maintenance.hs-sev-yellow .hs-maintenance-pill{
+    background: #fde68a;
+    color: #78350f;
+  }
+
+  .hs-maintenance.hs-sev-orange{
+    border-color: #fdba74;
+    background: #fff7ed;
+    color: #7c2d12;
+  }
+  .hs-maintenance.hs-sev-orange .hs-maintenance-pill{
+    background: #fed7aa;
+    color: #7c2d12;
+  }
+
+  .hs-maintenance.hs-sev-red{
+    border-color: #fda4af;
+    background: #fff1f2;
+    color: #881337;
+  }
+  .hs-maintenance.hs-sev-red .hs-maintenance-pill{
+    background: #fecdd3;
+    color: #881337;
+  }
+
+  .dark .hs-maintenance{
+    border-color: rgba(148,163,184,.25);
+    background: rgba(2,6,23,.55);
+    color: #e2e8f0;
+  }
+
+  .dark .hs-maintenance.hs-sev-yellow{
+    border-color: rgba(234,179,8,.35);
+    background: rgba(234,179,8,.10);
+    color: #fef3c7;
+  }
+  .dark .hs-maintenance.hs-sev-yellow .hs-maintenance-pill{
+    background: rgba(234,179,8,.25);
+    color: #fef3c7;
+  }
+
+  .dark .hs-maintenance.hs-sev-orange{
+    border-color: rgba(249,115,22,.35);
+    background: rgba(249,115,22,.10);
+    color: #ffedd5;
+  }
+  .dark .hs-maintenance.hs-sev-orange .hs-maintenance-pill{
+    background: rgba(249,115,22,.25);
+    color: #ffedd5;
+  }
+
+  .dark .hs-maintenance.hs-sev-red{
+    border-color: rgba(244,63,94,.35);
+    background: rgba(244,63,94,.10);
+    color: #ffe4e6;
+  }
+  .dark .hs-maintenance.hs-sev-red .hs-maintenance-pill{
+    background: rgba(244,63,94,.25);
+    color: #ffe4e6;
+  }
+</style>
+
+@endsection
+
 @section('content')
 @php
   $slotClass = function(string $s) {
@@ -370,87 +458,3 @@
   </div>
 </div>
 @endsection
-
-<style>
-  .hs-maintenance{
-    border-radius: 16px;
-    border: 1px solid rgba(0,0,0,.08);
-    background: #fff;
-    color: #0f172a;
-  }
-
-  .hs-maintenance .hs-maintenance-pill{
-    display: inline-flex;
-    align-items: center;
-    gap: .4rem;
-    padding: .3rem .6rem;
-    border-radius: 999px;
-    font-weight: 700;
-  }
-
-  .hs-maintenance.hs-sev-yellow{
-    border-color: #fcd34d;
-    background: #fffbeb;
-    color: #78350f;
-  }
-  .hs-maintenance.hs-sev-yellow .hs-maintenance-pill{
-    background: #fde68a;
-    color: #78350f;
-  }
-
-  .hs-maintenance.hs-sev-orange{
-    border-color: #fdba74;
-    background: #fff7ed;
-    color: #7c2d12;
-  }
-  .hs-maintenance.hs-sev-orange .hs-maintenance-pill{
-    background: #fed7aa;
-    color: #7c2d12;
-  }
-
-  .hs-maintenance.hs-sev-red{
-    border-color: #fda4af;
-    background: #fff1f2;
-    color: #881337;
-  }
-  .hs-maintenance.hs-sev-red .hs-maintenance-pill{
-    background: #fecdd3;
-    color: #881337;
-  }
-
-  .dark .hs-maintenance{
-    border-color: rgba(148,163,184,.25);
-    background: rgba(2,6,23,.55);
-    color: #e2e8f0;
-  }
-
-  .dark .hs-maintenance.hs-sev-yellow{
-    border-color: rgba(234,179,8,.35);
-    background: rgba(234,179,8,.10);
-    color: #fef3c7;
-  }
-  .dark .hs-maintenance.hs-sev-yellow .hs-maintenance-pill{
-    background: rgba(234,179,8,.25);
-    color: #fef3c7;
-  }
-
-  .dark .hs-maintenance.hs-sev-orange{
-    border-color: rgba(249,115,22,.35);
-    background: rgba(249,115,22,.10);
-    color: #ffedd5;
-  }
-  .dark .hs-maintenance.hs-sev-orange .hs-maintenance-pill{
-    background: rgba(249,115,22,.25);
-    color: #ffedd5;
-  }
-
-  .dark .hs-maintenance.hs-sev-red{
-    border-color: rgba(244,63,94,.35);
-    background: rgba(244,63,94,.10);
-    color: #ffe4e6;
-  }
-  .dark .hs-maintenance.hs-sev-red .hs-maintenance-pill{
-    background: rgba(244,63,94,.25);
-    color: #ffe4e6;
-  }
-</style>
